@@ -864,7 +864,7 @@ if(LINUX_DISTRO STREQUAL "Arch")
     # allow use reserved for cpack package target
     cmake_policy(PUSH)
     if(POLICY CMP0037)
-        cmake_policy(SET CMP0037 OLD)
+        cmake_policy(SET CMP0037 NEW)
     endif()
     add_custom_target(package
         COMMAND sh -c "if [ `id -u` -eq 0 ]; then chown nobody -R . && runuser nobody -c makepkg; else makepkg; fi"
