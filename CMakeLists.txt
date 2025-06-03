@@ -238,7 +238,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL AppleClang)
     # force libc++, not libstdc++ for Xcode 10
     # https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes#3035631
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
 endif()
 
 
